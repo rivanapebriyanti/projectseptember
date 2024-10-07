@@ -15,7 +15,7 @@
 <nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark fixed-top" arial-label="Furni navigation bar" style="background-color: #13357B">
     
     <div class="container">
-        <a class="navbar-brand" href="#">KEGIATAN</a>
+        <a class="navbar-brand" href="#">Bidang 6</a>
         
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -40,7 +40,7 @@
             <div class="col-md-6">
                 <div class="card mt-5">
                     <div class="card-header text-center">
-                        Tambahkan Kegiatan
+                        Tambahkan Anggota
                     </div>
                     <div class="card-body " >
                         <form action="/create-bidang6" method="post" enctype="multipart/form-data">
@@ -52,15 +52,15 @@
                             </div>
                             <div class="form-group pt-2">
                                 <label for="price">Nama</label>
-                                <input type="text" name="nama" class="form-control" id="price" placeholder="Masukkan Deskripsi">
+                                <input type="text" name="nama" class="form-control" id="price" placeholder="Masukkan Nama">
                             </div>
                             <div class="form-group pt-2">
                                 <label for="quantity">Kelas</label>
-                                <input type="text" name="kelas" class="form-control" id="quantity" placeholder="Masukkan tanggal">
+                                <input type="text" name="kelas" class="form-control" id="quantity" placeholder="Masukkan Kelas">
                             </div>
                             <div class="form-group pt-2">
-                                <label for="quantity">quotes</label>
-                                <input type="link" name="quotes" class="form-control" id="quantity" placeholder="Masukkan link gdrive">
+                                <label for="quantity">Quotes</label>
+                                <input type="link" name="quotes" class="form-control" id="quantity" placeholder="Masukkan Quotes">
                             </div>
                             <input type="submit" class="btn btn-secondary w-100 btn-block mt-5 text-white" style="background-color: #13357B"></input>
                         </form>

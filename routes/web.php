@@ -33,27 +33,41 @@ use Illuminate\Support\Facades\Route;
 //     return view('home');
 // });
 
+// Route user start
 Route::get('/',[HomeController::class,'index']);
 Route::get('/about',[HomeController::class,'about']);
 Route::get('/kontak',[HomeController::class,'kontak']);
 Route::get('/kegiatan',[HomeController::class,'kegiatan']);
 Route::get('/bidang1',[HomeController::class,'bidang1']);
+Route::get('/bidang2',[HomeController::class,'bidang2']);
+Route::get('/bidang3',[HomeController::class,'bidang3']);
+Route::get('/bidang4',[HomeController::class,'bidang4']);
+Route::get('/bidang5',[HomeController::class,'bidang5']);
+Route::get('/bidang6',[HomeController::class,'bidang6']);
+Route::get('/bidang7',[HomeController::class,'bidang7']);
+Route::get('/bidang8',[HomeController::class,'bidang8']);
+Route::get('/bidang9',[HomeController::class,'bidang9']);
 Route::get('/pengumuman',[HomeController::class,'pengumuman']);
+Route::get('/detail-pengumuman/{id}', [PengumumanController::class, 'detail']);
+Route::get('/detail-kegiatan/{id}', [KegiatanController::class, 'detail']);
+// Route user end 
 
+// login 
 Route::get('/auth',[UserController::class,'login']);
 Route::post('/auth',[UserController::class,'auth']);
 
 Route::middleware('StatusLogin')->group(function(){
-
     Route::get('/dashboard',[UserController::class,'dashboard']);
     Route::get('/logout',[UserController::class,'logout']);
     
+    // route kotak saran 
     Route::get('/admin-kotaksaran', [KotaksaranController::class, 'show']);
     Route::get('/create-kotaksaran', [KotaksaranController::class, 'create']);
     Route::post('/create-kotaksaran', [KotaksaranController::class, 'add']);
     Route::get('/delete-kotaksaran/{id}', [KotaksaranController::class, 'delete']);
+    // end
     
-    
+    // route pengumuman
     Route::get('/admin-pengumuman', [PengumumanController::class, 'show']);
     Route::get('/create-pengumuman', [PengumumanController::class, 'create']);
     Route::post('/create-pengumuman', [PengumumanController::class, 'add']);
@@ -61,7 +75,9 @@ Route::middleware('StatusLogin')->group(function(){
     Route::post('/update-pengumuman/{id}', [PengumumanController::class, 'update']);
     Route::get('/delete-pengumuman/{id}', [PengumumanController::class, 'delete']);
     Route::post('/admin-pengumuman', [PengumumanController::class, 'search']);
+    // end
     
+    // route kegiatan
     Route::get('/admin-kegiatan', [KegiatanController::class, 'show']);
     Route::get('/create-kegiatan', [KegiatanController::class, 'create']);
     Route::post('/create-kegiatan', [KegiatanController::class, 'add']);
@@ -69,7 +85,9 @@ Route::middleware('StatusLogin')->group(function(){
     Route::post('/update-kegiatan/{id}', [KegiatanController::class, 'update']);
     Route::get('/delete-kegiatan/{id}', [KegiatanController::class, 'delete']);
     Route::post('/admin-kegiatan', [KegiatanController::class, 'search']);
-    
+    // end 
+
+    // bidang 
     Route::get('/admin-bidang', [BidangController::class, 'show']);
     Route::get('/create-bidang', [BidangController::class, 'create']);
     Route::post('/create-bidang', [BidangController::class, 'add']);
@@ -150,5 +168,5 @@ Route::middleware('StatusLogin')->group(function(){
     Route::post('/update-bidang9/{id}', [Bidang9Controller::class, 'update']);
     Route::get('/delete-bidang9/{id}', [Bidang9Controller::class, 'delete']);
     Route::post('/admin-bidang9', [Bidang9Controller::class, 'search']);
-
+    // end 
 });

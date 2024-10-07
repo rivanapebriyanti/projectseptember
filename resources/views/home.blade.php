@@ -28,16 +28,16 @@
                             <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
                         </svg></a>
                         <div class="dropdown-menu m-0">
-                            <a href="" class="dropdown-item">BPH</a>
+                            <a href="/bidang" class="dropdown-item">BPH</a>
                             <a href="/bidang1" class="dropdown-item">Bidang 1</a>
-                            <a href="" class="dropdown-item">Bidang 2</a>
-                            <a href="" class="dropdown-item">Bidang 3</a>
-                            <a href="" class="dropdown-item">Bidang 4</a>
-                            <a href="" class="dropdown-item">Bidang 5</a>
-                            <a href="" class="dropdown-item">Bidang 6</a>
-                            <a href="" class="dropdown-item">Bidang 7</a>
-                            <a href="" class="dropdown-item">Bidang 8</a>
-                            <a href="" class="dropdown-item">Bidang 9</a>
+                            <a href="/bidang2" class="dropdown-item">Bidang 2</a>
+                            <a href="/bidang3" class="dropdown-item">Bidang 3</a>
+                            <a href="/bidang4" class="dropdown-item">Bidang 4</a>
+                            <a href="/bidang5" class="dropdown-item">Bidang 5</a>
+                            <a href="/bidang6" class="dropdown-item">Bidang 6</a>
+                            <a href="/bidang7" class="dropdown-item">Bidang 7</a>
+                            <a href="/bidang8" class="dropdown-item">Bidang 8</a>
+                            <a href="/bidang9" class="dropdown-item">Bidang 9</a>
                         </div>
                     </div>
                     <a href="/kegiatan" class="nav-item nav-link">Kegiatan</a>
@@ -52,46 +52,41 @@
     <div class="container-fluid about py-5 bg-light">
         <div class="container py-5">
             <div class="row g-5 align-items-center">
-                <!-- Bagian gambar -->
                 <div class="col-lg-5">
                     <div class="h-100" style="border: 15px solid transparent; border-color: #13357B transparent; border-radius: 20px; overflow: hidden; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);">
                         <img src="{{ asset('storage/gambar/logo osis smk ypc.webp') }}" class="img-fluid w-100 h-100" alt="OSIS SMK YPC" style="transition: transform 0.3s ease;">
                     </div>
                 </div>
                 
-                <!-- Bagian teks -->
                 <div class="col-lg-7">
-                    <h5 class="section-about-title pe-3" style="color: #13357B; font-weight: bold;">About Us</h5>
+                    <h5 class="section-about-title pe-3" style="color: #13357B; font-weight: bold;">Tentang kami</h5>
                     <h1 class="mb-4">Welcome to <span style="color: #1a0dab">OSIS SMK YPC</span></h1>
-                    <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, dolorum, doloribus sunt dicta, officia voluptatibus libero necessitatibus natus impedit quam ullam assumenda? Id atque iste consectetur. Commodi odit ab saepe!</p>
+                    <p class="mb-4">OSIS SMK YPC TASIKMALAYA hadir dengan versi terbaru!.</p>
+                    <p class="mb-4">Dengan fashion yang lebih aktif kami siap menjadi wadah untuk menampung aspirasi siwa</p>
                     <div class="row gy-2 gx-4 mb-4">
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>First Class Flights</p>
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Kegiatan-kegiatan menarik</p>
                         </div>
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Handpicked Hotels</p>
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Penyaluran bakat</p>
                         </div>
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>5 Star Accommodations</p>
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Aspirasi,kritik dan saran</p>
                         </div>
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Latest Model Vehicles</p>
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Penyaluran pengumuman</p>
                         </div>
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>150 Premium City Tours</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>24/7 Service</p>
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Pengalaman berguna dll</p>
                         </div>
                     </div>
-                    <!-- Tombol dengan style yang lebih menarik -->
-                    <a class="btn-custom rounded-pill py-3 px-5 mt-2" href="/about" style="color: white; background-color: #1a0dab; transition: background-color 0.3s ease;">Read More</a>
+                    <a class="btn-custom rounded-pill py-3 px-5 mt-2" href="/about" style="color: white; background-color: #1a0dab; transition: background-color 0.3s ease;">Lihat selengkapnya</a>
                 </div>
             </div>
         </div>
     </div>
     
-    <!-- CSS tambahan untuk efek hover -->
+    <!-- CSS tambahan -->
     <style>
         .col-lg-5 img:hover {
             transform: scale(1.05);
@@ -111,8 +106,8 @@
             <h1 class="mb-0 text-dark display-4">Pengumuman</h1>
         </div>
         <div class="row">
-            @foreach ($pengumuman as  $item)
-            <div class="col-lg-6 mb-4">
+            @foreach ($pengumuman as $key=> $item)
+            <a class="col-lg-6 mb-4 text-decoration-none" href="/detail-pengumuman/{{ $item->id }}">
                 <div class="pengumuman-content-inner d-flex align-items-center bg-white shadow-lg rounded p-4 pe-0" style="border-left: 6px solid #13357B; transition: transform 0.3s ease, box-shadow 0.3s ease;">
                     <div class="icon-box me-4">
                         <i class="fas fa-bullhorn fa-3x text-primary"></i>
@@ -122,7 +117,7 @@
                         {{-- <p class="mb-0 text-muted">{{ $item->deskripsi }}</p> --}}
                     </div>
                 </div>
-            </div>
+            </a>
             @endforeach
         </div>
     </div>
@@ -313,27 +308,30 @@
 <div class="container-fluid bidang py-5 bg-light">
     <div class="container py-5">
         <div class="mx-auto text-center mb-5" style="max-width: 900px;">
-            <h5 class="section-title px-3">BIDANG</h5>
-            <h1 class="mb-4">Apa itu bidang?</h1>
-            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum tempore nam, architecto doloremque velit explicabo? Voluptate sunt eveniet fuga eligendi! Expedita laudantium fugiat corrupti eum cum repellat a laborum quasi.</p>
+            {{-- <h1 class="mb-0 text-dark display-4">Bidang</h1> --}}
         </div>
         <div class="tab-class text-center">
             <div class="tab-content">
                 <div id="bidang-1" class="tab-pane fade show p-0 active">
                     <div class="row g-4">
-                        <div class="col-md-6 col-lg-3">
+                        <div class="col-md-6 col-lg-6">
                             <div class="bidang-item">
-                                <img src="{{ asset('storage/gambar/foto.jpeg') }}" class="img-fluid w-100 rounded" alt="Image">
+                                <img src="{{ asset('storage/gambar/foto.jpeg') }}" class="img-fluid rounded max-width:500px" alt="Image">
                                 <div class="bidang-content">
                                     <div class="bidang-info">
-                                        <h5 class="text-white text-uppercase mb-2">Bidang 1</h5>
-                                        <a href="/bidang1" class="btn-hover text-white">Lihat Selengkapnya<i class="fa fa-arrow-right ms-2"></i></a>
+                                        <h5 class="text-white text-uppercase mb-2">Badan Pengurus Harian (BPH)</h5>
+                                        <a href="/bidang" class="btn-hover text-white">Lihat Selengkapnya<i class="fa fa-arrow-right ms-2"></i></a>
                                     </div>
                                 </div>
                             </div>
                         </div>  
-                        {{-- @foreach ($bidang1 as $key=> $item) --}}
-                        <div class="col-md-6 col-lg-3">
+                        <div class="col-md-6 col-lg-6">
+                        <div class="mx-auto text-end mb-5" style="max-width: 900px;">
+                            <h1 class="mb-4">Apa saja bidang OSIS?</h1>
+                            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum tempore nam, architecto doloremque velit explicabo? Voluptate sunt eveniet fuga eligendi! Expedita laudantium fugiat corrupti eum cum repellat a laborum quasi.</p>
+                        </div>
+                    </div>
+                        <div class="col-md-6 col-lg-4">
                             <div class="bidang-item">
                                 <img src="{{ asset('storage/gambar/foto.jpeg') }}" class="img-fluid w-100 rounded" alt="Image">
                                 <div class="bidang-content">
@@ -345,90 +343,90 @@
                             </div>
                         </div>   
                         {{-- @endforeach --}}
-                        <div class="col-md-6 col-lg-3">
+                        <div class="col-md-6 col-lg-4">
                             <div class="bidang-item">
                                 <img src="{{ asset('storage/gambar/foto1.jpeg') }}" class="img-fluid w-100 rounded" alt="Image">
                                 <div class="bidang-content">
                                     <div class="bidang-info">
                                         <h5 class="text-white text-uppercase mb-2">Bidang 2</h5>
-                                        <a href="#" class="btn-hover text-white">Lihat Selengkapnya<i class="fa fa-arrow-right ms-2"></i></a>
+                                        <a href="/bidang2" class="btn-hover text-white">Lihat Selengkapnya<i class="fa fa-arrow-right ms-2"></i></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-3">
+                        <div class="col-md-6 col-lg-4">
                             <div class="bidang-item">
                                 <img src="{{ asset('storage/gambar/foto2.jpeg') }}" class="img-fluid w-100 rounded" alt="Image">
                                 <div class="bidang-content">
                                     <div class="bidang-info">
                                         <h5 class="text-white text-uppercase mb-2">Bidang 3</h5>
-                                        <a href="#" class="btn-hover text-white">Lihat Selengkapnya<i class="fa fa-arrow-right ms-2"></i></a>
+                                        <a href="/bidang3" class="btn-hover text-white">Lihat Selengkapnya<i class="fa fa-arrow-right ms-2"></i></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-3">
+                        <div class="col-md-6 col-lg-4">
                             <div class="bidang-item">
                                 <img src="{{ asset('storage/gambar/foto.jpeg') }}" class="img-fluid w-100 rounded" alt="Image">
                                 <div class="bidang-content">
                                     <div class="bidang-info">
                                         <h5 class="text-white text-uppercase mb-2">Bidang 4</h5>
-                                        <a href="#" class="btn-hover text-white">Lihat Selengkapnya<i class="fa fa-arrow-right ms-2"></i></a>
+                                        <a href="/bidang4" class="btn-hover text-white">Lihat Selengkapnya<i class="fa fa-arrow-right ms-2"></i></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-3">
+                        <div class="col-md-6 col-lg-4">
                             <div class="bidang-item">
                                 <img src="{{ asset('storage/gambar/foto1.jpeg') }}" class="img-fluid w-100 rounded" alt="Image">
                                 <div class="bidang-content">
                                     <div class="bidang-info">
                                         <h5 class="text-white text-uppercase mb-2">Bidang 5</h5>
-                                        <a href="#" class="btn-hover text-white">Lihat Selengkapnya<i class="fa fa-arrow-right ms-2"></i></a>
+                                        <a href="/bidang5" class="btn-hover text-white">Lihat Selengkapnya<i class="fa fa-arrow-right ms-2"></i></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-3">
+                        <div class="col-md-6 col-lg-4">
                             <div class="bidang-item">
                                 <img src="{{ asset('storage/gambar/foto2.jpeg') }}" class="img-fluid w-100 rounded" alt="Image">
                                 <div class="bidang-content">
                                     <div class="bidang-info">
                                         <h5 class="text-white text-uppercase mb-2">Bidang 6</h5>
-                                        <a href="#" class="btn-hover text-white">Lihat Selengkapnya<i class="fa fa-arrow-right ms-2"></i></a>
+                                        <a href="/bidang6" class="btn-hover text-white">Lihat Selengkapnya<i class="fa fa-arrow-right ms-2"></i></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-3">
+                        <div class="col-md-6 col-lg-4">
                             <div class="bidang-item">
                                 <img src="{{ asset('storage/gambar/foto.jpeg') }}" class="img-fluid w-100 rounded" alt="Image">
                                 <div class="bidang-content">
                                     <div class="bidang-info">
                                         <h5 class="text-white text-uppercase mb-2">Bidang 7</h5>
-                                        <a href="#" class="btn-hover text-white">Lihat Selengkapnya<i class="fa fa-arrow-right ms-2"></i></a>
+                                        <a href="/bidang7" class="btn-hover text-white">Lihat Selengkapnya<i class="fa fa-arrow-right ms-2"></i></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-3">
+                        <div class="col-md-6 col-lg-4">
                             <div class="bidang-item">
                                 <img src="{{ asset('storage/gambar/foto1.jpeg') }}" class="img-fluid w-100 rounded" alt="Image">
                                 <div class="bidang-content">
                                     <div class="bidang-info">
                                         <h5 class="text-white text-uppercase mb-2">Bidang 8</h5>
-                                        <a href="#" class="btn-hover text-white">Lihat Selengkapnya<i class="fa fa-arrow-right ms-2"></i></a>
+                                        <a href="/bidang8" class="btn-hover text-white">Lihat Selengkapnya<i class="fa fa-arrow-right ms-2"></i></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-3">
+                        <div class="col-md-6 col-lg-4">
                             <div class="bidang-item">
                                 <img src="{{ asset('storage/gambar/foto2.jpeg') }}" class="img-fluid w-100 rounded" alt="Image">
                                 <div class="bidang-content">
                                     <div class="bidang-info">
                                         <h5 class="text-white text-uppercase mb-2">Bidang 9</h5>
-                                        <a href="#" class="btn-hover text-white">Lihat Selengkapnya<i class="fa fa-arrow-right ms-2"></i></a>
+                                        <a href="/bidang9" class="btn-hover text-white">Lihat Selengkapnya<i class="fa fa-arrow-right ms-2"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -457,7 +455,7 @@
                         <div class="kegiatan-img">
                             <img src="{{ asset('storage/gambar/'.$item->foto) }}" class="img-fluid w-100 rounded" alt="">
                             <div class="kegiatan-content">
-                                <a href="#" class="text-center text-decoration-none">
+                                <a href="/detail-kegiatan/{{ $item->id }}" class="text-center text-decoration-none">
                                     <h4 class=" text-white">MAULID NABI</h4>
                                     {{-- <p class="m-0 text-white">Web Analysis</p> --}}
                                 </a>
@@ -466,33 +464,6 @@
                     </div>
                 </div>
                 @endforeach
-                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".5s">
-                    <div class="kegiatan-item">
-                        <div class="kegiatan-img">
-                            <img src="{{ asset('storage/gambar/foto2.jpeg') }}" class="img-fluid w-100 rounded" alt="">
-                            <div class="kegiatan-content">
-                                <a href="#" class="text-center text-decoration-none">
-                                    <h4 class="text-white">17 AGUSTUS</h4>
-                                    {{-- <p class="m-0 text-white">Cyber Security Core</p> --}}
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".7s">
-                    <div class="kegiatan-item">
-                        <div class="kegiatan-img">
-                            <img src="{{ asset('storage/gambar/foto2.jpeg') }}" class="img-fluid w-100 rounded" alt="">
-                            <div class="kegiatan-content">
-                                <a href="#" class="text-center text-decoration-none">
-                                    <h4 class="text-white">PPDB</h4>
-                                    {{-- <p class="m-0 text-white">Upcomming Phone</p> --}}
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
             </div>
         </div>
     </div>

@@ -114,7 +114,8 @@ class Bidang2Controller extends Controller
     {
         $data['bidang2'] = bidang2::all();
 
-        $data['bidang2'] = bidang2::where('judul', 'LIKE', '%' . $request->cari . '%')->get();
+        $data['bidang2'] = bidang2::where('nama', 'LIKE', '%' . $request->cari . '%')->orwhere('kelas', 'LIKE', '%' . $request->cari . '%')->get();
+
 
 
         return view('admin-bidang2', $data);

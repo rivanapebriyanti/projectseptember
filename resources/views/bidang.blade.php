@@ -4,64 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pengumuman</title>
+    <title>Bidang OSIS</title>
     <link rel="stylesheet" href="{{ asset('assets/bootstrap/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <style>
-        .about h4 {
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
             color: #13357B;
-            font-weight: bold;
+            margin-bottom: 20px;
         }
 
-        .about h1 span {
-            color: #1a0dab;
-            font-weight: bold;
-        }
-
-        .card-shadow {
+        .card {
+            border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 15px;
-            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
 
         .card img {
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            max-height: 200px;
+            object-fit: cover;
         }
 
-        .card-body h1 {
-            font-size: 2rem;
+        .card h5 {
+            font-size: 18px;
             font-weight: bold;
-            color: #13357B;
+            color: #1a0dab;
         }
 
-        .card-body p {
-            font-size: 1rem;
+        .card p {
+            font-size: 14px;
             color: #555;
-            line-height: 1.6;
         }
 
-        .btn-custom {
-            color: white;
-            background-color: #1a0dab;
-            border-radius: 50px;
-            padding: 12px 30px;
-            transition: background-color 0.3s ease;
+        .card-shadow {
+            margin-top: 50px;
         }
 
-        .btn-custom:hover {
-            background-color: #13357B;
-        }
-
-        .card-body .date {
-            text-align: right;
-            font-size: 0.9rem;
-            color: #777;
+        .content-center {
+            text-align: center;
         }
     </style>
 </head>
 <body>
-     {{-- navbar start --}}
+    {{-- navbar start --}}
     {{-- <div class="container-fluid position-relative p-2"> --}}
         <nav class="navbar navbar-expand-lg navbar px-6 px-lg-5 py-4 py-lg-2">
             <a href="" class="navbar-brand p-0">
@@ -100,38 +92,33 @@
         </nav>
         {{-- navbar end --}}
 
-    <!-- Section About Us -->
-    <div class="container-fluid about py-5 bg-light">
+    <div class="container-fluid bidang py-5 bg-light">
         <div class="container py-5">
+                
             <div class="mx-auto text-center mb-5" style="max-width: 900px;">
-                <h4 class="mb-0">Pengumuman</h4>
-                <h1 class="bold mt-3">Welcome to <span>OSIS SMK YPC</span></h1>
-                <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, dolorum, doloribus sunt dicta, officia voluptatibus libero necessitatibus natus impedit quam ullam assumenda?</p>
+                <img src="{{ asset('storage/gambar/foto2.jpeg') }}" class="img-fluid mb-4" alt="OSIS SMK YPC" style="border-radius: 15px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+                <h5 class="section-title px-3">BIDANG 1</h5>
+                <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus nulla numquam fugit qui dicta natus.</p>
             </div>
-
-            <!-- Content Card -->
-            <div class="container py-5 content-center">
-                {{-- <div class="card"> --}}
-                    <div class="row">
-                        @foreach ($pengumuman as $key=>$item)
-                            <a class="col-lg-12 mb-5 mx-auto text-decoration-none" href="/detail-pengumuman/{{ $item->id }}">
-                                <div class="card " style="border:none;">
-                                    <div class="card-body">
-                                        <div class="row g-5 align-items-center">
-                                            <div class="col-lg-12">
-                                                <!-- Text content -->
-                                                <h1>{{ $item->judul }}</h1>
-                                                <p>{{ $item->deskripsi }}</p>
-                                                <div class="date mt-4">{{ $item->tanggal }}</div>
-                                                
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            @endforeach
+            <!-- Judul Seksi -->
+            
+            
+            <!-- Bidang Cards -->
+            <div class="row text-center">
+                <!-- Card 1 -->
+                @foreach ($bidang as $key=>$item)
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card bg-light">
+                        <img src="{{ asset('storage/gambar/'.$item->anggota) }}" class="img-fluid" alt="OSIS SMK YPC">
+                        <div class="card-body">
+                            <h5>{{ $item->nama }}</h5>
+                            <p>{{ $item->kelas }}</p>
+                            <p>{{ $item->quotes }}</p>
                         </div>
+                    </div>
                 </div>
+                @endforeach
             </div>
         </div>
     </div>
@@ -157,9 +144,3 @@
     {{-- footer end --}}
 </body>
 </html>
-
-
-
-
-
-

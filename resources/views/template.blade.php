@@ -40,21 +40,21 @@
                                 Dashboard
                             </a>
                             
-                            {{-- <a class="nav-link collapsed" href="/admin-pengumuman" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                            <a class="nav-link collapsed" href="/admin-kotaksaran" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                Pengumuman
+                                Kotak saran
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                            </a> --}}
+                            </a>
                             <a class="nav-link collapsed" href="/admin-pengumuman" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                                 Pengumuman
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
                             
-                            <a class="nav-link" href="/admin-bidang">
+                            {{-- <a class="nav-link" href="/admin-bidang">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Bidang
-                            </a>
+                            </a> --}}
                             <a class="nav-link collapsed" href="/admin-kegiatan" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                                 Kegiatan
@@ -77,56 +77,116 @@
                     <div class="row" style="margin-left: 5px">
                         <div class="col-xl-3 col-md-6">
                             <div class="card bg-primary text-white mb-4">
-                                <div class="card-body">Primary Card</div>
+                                <div class="card-body">Data Badan Pengurus Harian(BPH)</div>
                                 <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <a class="small text-white stretched-link" href="#">View Details</a>
+                                    <a class="small text-white stretched-link" href="/admin-bidang">Lihat selengkapnya</a>
                                     <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-xl-3 col-md-6">
                             <div class="card bg-warning text-white mb-4">
-                                <div class="card-body">Warning Card</div>
+                                <div class="card-body">Data Bidang 1</div>
                                 <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <a class="small text-white stretched-link" href="#">View Details</a>
+                                    <a class="small text-white stretched-link" href="admin-bidang1">Lihat selengkapnya</a>
                                     <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-xl-3 col-md-6">
                             <div class="card bg-success text-white mb-4">
-                                <div class="card-body">Success Card</div>
+                                <div class="card-body">Data Bidang 2</div>
                                 <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <a class="small text-white stretched-link" href="#">View Details</a>
+                                    <a class="small text-white stretched-link" href="admin-bidang2">Lihat selengkapnya</a>
                                     <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-xl-3 col-md-6">
                             <div class="card bg-danger text-white mb-4">
-                                <div class="card-body">Danger Card</div>
+                                <div class="card-body">Data Bidang 3</div>
                                 <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <a class="small text-white stretched-link" href="#">View Details</a>
+                                    <a class="small text-white stretched-link" href="admin-bidang3">Lihat selengkapnya</a>
+                                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6">
+                            <div class="card bg-danger text-white mb-4">
+                                <div class="card-body">Data Bidang 4</div>
+                                <div class="card-footer d-flex align-items-center justify-content-between">
+                                    <a class="small text-white stretched-link" href="/admin-bidang4">Lihat selengkapnya</a>
+                                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6">
+                            <div class="card bg-success text-white mb-4">
+                                <div class="card-body">Data Bidang 5</div>
+                                <div class="card-footer d-flex align-items-center justify-content-between">
+                                    <a class="small text-white stretched-link" href="admin-bidang5">Lihat selengkapnya</a>
+                                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6">
+                            <div class="card bg-warning text-white mb-4">
+                                <div class="card-body">Data Bidang 6</div>
+                                <div class="card-footer d-flex align-items-center justify-content-between">
+                                    <a class="small text-white stretched-link" href="admin-bidang6">Lihat selengkapnya</a>
+                                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6">
+                            <div class="card bg-primary text-white mb-4">
+                                <div class="card-body">Data Bidang 7</div>
+                                <div class="card-footer d-flex align-items-center justify-content-between">
+                                    <a class="small text-white stretched-link" href="admin-bidang7">Lihat selengkapnya</a>
+                                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6">
+                            <div class="card bg-warning text-white mb-4">
+                                <div class="card-body">Data Bidang 8</div>
+                                <div class="card-footer d-flex align-items-center justify-content-between">
+                                    <a class="small text-white stretched-link" href="/admin-bidang8">Lihat selengkapnya</a>
+                                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6">
+                            <div class="card bg-danger text-white mb-4">
+                                <div class="card-body">Data Bidang 9</div>
+                                <div class="card-footer d-flex align-items-center justify-content-between">
+                                    <a class="small text-white stretched-link" href="admin-bidang9">Lihat selengkapnya</a>
                                     <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </main>
-                <footer class="py-4 bg-light mt-auto">
+                {{-- footer start --}}
+                <footer class="py-4 bg-white mt-auto">
                     <div class="container-fluid px-4">
-                        <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Your Website 2023</div>
-                            <div>
-                                <a href="#">Privacy Policy</a>
-                                &middot;
-                                <a href="#">Terms &amp; Conditions</a>
-                            </div>
-                        </div>
+            <div class="border-top copyright" >
+                <div class="row pt-4">
+                    <div class="col-lg-6">
+                        <a class="mb-4 text-center text-lg-start text-decoration-none" style="color: #1a0dab" href=""><img src="{{ asset('storage/gambar/smkypc.png') }}" alt="" style="width: 10%; margin-right:3%" >SMK YPC TASIKMALAYA <br></a><p style="margin-left: 13%">Jl. Garut - Tasikmalaya, Cikunten, Kec. Singaparna, Kabupaten Tasikmalaya, Jawa Barat 46414</p>
+                    </div>
+                    <div class="col-lg-6 text-center text-lg-end">
+                        <ul class="list-unstyled d-inline-flex ms-auto">
+                            <li class="me-4"><a class="text-decoration-none" href="#">Terms &amp; Conditions</a></li>
+                            <li><a href="#" class="text-decoration-none">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            {{-- footer end --}}
                     </div>
                 </footer>
             </div>
         </div>
-        
     </body>
 </html>

@@ -87,7 +87,7 @@
     <nav class="custom-navbar navbar navbar-expand-md navbar-dark fixed-top" aria-label="Furni navigation bar"
         style="background-color: #13357B">
         <div class="container">
-            <a class="navbar-brand" href="#">Bidang 4</a>
+            <a class="navbar-brand" href="#">Badan Pengurus Harian</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni"
                 aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -121,13 +121,13 @@
 
             <div class="row mb-4">
                 <div class="col-md-6">
-                    <a href="/create-bidang4" class="btn btn-custom text-white" style="border-color :#13357B; background-color: #fff">
+                    <a href="/create-bidang" class="btn btn-custom text-white" style="border-color :#13357B; background-color: #fff">
                         Tambah Data
                     </a>
                 </div>
 
                 <div class="col-md-6">
-                    <form action="/admin-bidang4" method="post">
+                    <form action="/admin-bidang" method="post">
                         @csrf
                         <div class="input-group">
                             <input type="text" name="cari" class="form-control" placeholder="Search"
@@ -153,7 +153,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($bidang4 as $key => $item)
+                            @foreach ($bidang as $key => $item)
                                 <tr>
                                     <td>{{ $key+1 }}</td>
                                     <td><img src="{{ asset('storage/gambar/'.$item->anggota) }}" alt="" style="width: 50px; height:50px"></td>
@@ -161,9 +161,9 @@
                                     <td>{{ $item->kelas }}</td>
                                     <td>{{ $item->quotes }}</td>
                                     <td>
-                                        <a href="/delete-bidang4/{{ $item->id }}" onclick="return window.confirm('Yakin hapus data ini?')"
+                                        <a href="/delete-bidang/{{ $item->id }}" onclick="return window.confirm('Yakin hapus data ini?')"
                                             class="btn btn-danger-custom btn-sm" style="width: 80px">Hapus</a>
-                                        <a href="/update-bidang4/{{ $item->id }}" class="btn btn-info-custom btn-sm" style="width: 80px; margin-top:3px">Edit</a>
+                                        <a href="/update-bidang/{{ $item->id }}" class="btn btn-info-custom btn-sm" style="width: 80px; margin-top:3px">Edit</a>
                                     </td>
                                 </tr>
                             @endforeach

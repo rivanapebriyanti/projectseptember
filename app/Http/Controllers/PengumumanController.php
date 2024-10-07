@@ -75,6 +75,13 @@ class PengumumanController extends Controller
 
         return view('admin-pengumuman', $data);
     }
+
+    public function detail(Request $request, $id){
+        // $data['pengumuman']=Pengumuman::all();
+        $data['pengumuman']=Pengumuman::find($request->$id);
+        $data['pengumuman'] = Pengumuman::where("id", $request->id)->first();
+        return view('detail-pengumuman', $data);
+    }
 }
 
 

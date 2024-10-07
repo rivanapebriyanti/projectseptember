@@ -15,7 +15,7 @@
 <nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark fixed-top" arial-label="Furni navigation bar" style="background-color: #13357B">
     
     <div class="container">
-        <a class="navbar-brand" href="#">KEGIATAN</a>
+        <a class="navbar-brand" href="#">PENGUMUMAN</a>
         
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -40,7 +40,7 @@
             <div class="col-md-6">
                 <div class="card mt-5">
                     <div class="card-header text-center">
-                        Tambahkan Kegiatan
+                        Tambahkan Pengumuman
                     </div>
                     <div class="card-body " >
                         <form action="/create-pengumuman" method="post" enctype="multipart/form-data">
@@ -57,7 +57,7 @@
                                 <label for="quantity">Tanggal</label>
                                 <input type="date" name="tanggal" class="form-control" id="quantity" placeholder="Masukkan tanggal">
                             </div>
-                            <input type="submit" class="btn btn-secondary w-100 btn-block mt-5 text-white" style="background-color: #13357B"></input>
+                            <input type="submit" class="btn btn-secondary w-100 btn-block mt-5 text-white" style="background-color: #13357B" value="Kirim"></input>
                         </form>
                     </div>
                 </div>

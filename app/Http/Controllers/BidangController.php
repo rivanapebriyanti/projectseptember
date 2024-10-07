@@ -3,12 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\Models\Bidang;
+use App\Models\Bidang9;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
 
+
 class BidangController extends Controller
 {
+
+
     public function show(Request $request)
     {
 
@@ -26,25 +30,17 @@ class BidangController extends Controller
     {
         $data['bidang'] = Bidang::all();
 
-        $fotobidang = '';
-        if ($request->file('fotobidang')) {
-            # code...
-            $ext = $request->file('fotobidang')->getClientOriginalExtension();
-            $fotobidang = time() . '.' . $ext;
-            $request->file('fotobidang')->storeAs('gambar', $fotobidang);
-        }
-
         $anggota = '';
         if ($request->file('anggota')) {
-            # code...
             $ext = $request->file('anggota')->getClientOriginalExtension();
             $anggota = time() . '_anggota.' . $ext;
             $request->file('anggota')->storeAs('gambar', $anggota);
         }
         $bidang = Bidang::create([
-            'fotobidang' => $fotobidang,
-            'tugas' => $request->tugas,
             'anggota' => $anggota,
+            'nama' => $request->nama,
+            'kelas' => $request->kelas,
+            'quotes' => $request->quotes,
         ]);
 
         if ($bidang) {
@@ -66,52 +62,38 @@ class BidangController extends Controller
 
     public function update(Request $request, $id)
     {
-        $data['bidang'] = Bidang::all();
-        // dd($request->file('fotobidang'));
-        // dd($request->file('anggota'));
-        $update = Bidang::where('id', $id)->first();
-        # code...
-        
-        $fotobidang = '';
-        if ($request->file('fotobidang')) {
-            Storage::delete('/gambar/' . $update->fotobidang);
-            # code...
-            $ext = $request->file('fotobidang')->getClientOriginalExtension();
-            $fotobidang = time() . '.' . $ext;
-            $request->file('fotobidang')->storeAs('gambar', $fotobidang);
-        }
+        $data['bidang'] =Bidang::all();
+
+        $update =Bidang::where('id', $id)->first();
 
         $anggota = '';
         if ($request->file('anggota')) {
-            # code...
             Storage::delete('/gambar/' . $update->anggota);
             $ext = $request->file('anggota')->getClientOriginalExtension();
             $anggota = time() . '_anggota.' . $ext;
             $request->file('anggota')->storeAs('gambar', $anggota);
         }
-        if ($anggota && $fotobidang) {
+        if ($anggota) {
             $update->update([
-                'fotobidang' => $fotobidang,
-                'tugas' => $request->tugas,
+                'anggota' => $anggota,
+                'nama' => $request->nama,
+                'kelas' => $request->kelas,
+                'quotes' => $request->quotes,
             ]);
-            // return redirect('/admin-bidang1');
         }else if($anggota){
             $update->update([
-                // 'fotobidang' => $fotobidang,
-                'tugas' => $request->tugas,
-            ]);
-        }else if($fotobidang){
-            $update->update([
-                'fotobidang' => $fotobidang,
-                'tugas' => $request->tugas,
-                // 'anggota' => $anggota,
+                'anggota' => $anggota,
+                'nama' => $request->nama,
+                'kelas' => $request->kelas,
+                'quotes' => $request->quotes,
             ]);
             
         }
          else {
-            # code...
             $update = Bidang::where('id', $id)->update([
-                'tugas' => $request->tugas,
+                'nama' => $request->nama,
+                'kelas' => $request->kelas,
+                'quotes' => $request->quotes,
             ]);
         }
 
@@ -125,7 +107,7 @@ class BidangController extends Controller
 
     public function delete(Request $request)
     {
-        $hapus = Bidang::find($request->id);
+        $hapus =Bidang::find($request->id);
         Storage::delete('gambar/' . $hapus->gambar);
         $hapus->delete();
         return redirect('admin-bidang');
@@ -133,11 +115,13 @@ class BidangController extends Controller
 
     public function search(Request $request)
     {
-        $data['bidang'] = Bidang::all();
+        $data['bidang'] =Bidang::all();
 
-        $data['bidang'] = Bidang::where('judul', 'LIKE', '%' . $request->cari . '%')->get();
+        $data['bidang'] = Bidang::where('nama', 'LIKE', '%' . $request->cari . '%')->orwhere('kelas', 'LIKE', '%' . $request->cari . '%')->get();
+
 
 
         return view('admin-bidang', $data);
     }
 }
+

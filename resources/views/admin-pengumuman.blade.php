@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{ asset('assets/bootstrap/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <style>
-        /* Custom styles */
+        /* style pengumuman */
         .navbar-brand {
             font-size: 1.5rem;
             font-weight: bold;
@@ -122,7 +122,7 @@
             <div class="row mb-4">
                 <div class="col-md-6">
                     <a href="/create-pengumuman" class="btn btn-custom text-white" style="border-color :#13357B; background-color: #fff">
-                        Tambah Data
+                        Tambah Pengumuman
                     </a>
                 </div>
 
@@ -133,7 +133,9 @@
                             <input type="text" name="cari" class="form-control" placeholder="Search"
                                 style="border-color :#13357B;">
                             <button class="btn text-dark" style="border-color :#13357B; background-color: #fff"
-                                type="submit">Go</button>
+                                type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                                  </svg></button>
                         </div>
                     </form>
                 </div>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pengumuman</title>
+    <title>Detail pengumuman</title>
     <link rel="stylesheet" href="{{ asset('assets/bootstrap/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <style>
@@ -99,42 +99,19 @@
             </div>
         </nav>
         {{-- navbar end --}}
-
     <!-- Section About Us -->
     <div class="container-fluid about py-5 bg-light">
         <div class="container py-5">
             <div class="mx-auto text-center mb-5" style="max-width: 900px;">
                 <h4 class="mb-0">Pengumuman</h4>
-                <h1 class="bold mt-3">Welcome to <span>OSIS SMK YPC</span></h1>
-                <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, dolorum, doloribus sunt dicta, officia voluptatibus libero necessitatibus natus impedit quam ullam assumenda?</p>
-            </div>
-
-            <!-- Content Card -->
-            <div class="container py-5 content-center">
-                {{-- <div class="card"> --}}
-                    <div class="row">
-                        @foreach ($pengumuman as $key=>$item)
-                            <a class="col-lg-12 mb-5 mx-auto text-decoration-none" href="/detail-pengumuman/{{ $item->id }}">
-                                <div class="card " style="border:none;">
-                                    <div class="card-body">
-                                        <div class="row g-5 align-items-center">
-                                            <div class="col-lg-12">
-                                                <!-- Text content -->
-                                                <h1>{{ $item->judul }}</h1>
-                                                <p>{{ $item->deskripsi }}</p>
-                                                <div class="date mt-4">{{ $item->tanggal }}</div>
-                                                
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            @endforeach
-                        </div>
-                </div>
+                <h1 class="bold mt-3">{{ $pengumuman->judul }}</h1>
+                <p class="mb-4">{{ $pengumuman->deskripsi }}</p>
+                <div class="date mt-4">{{ $pengumuman->tanggal }}</div>
             </div>
         </div>
     </div>
+
+    
 
     {{-- footer start --}}
     <footer class="footer-section ">
@@ -157,9 +134,3 @@
     {{-- footer end --}}
 </body>
 </html>
-
-
-
-
-
-

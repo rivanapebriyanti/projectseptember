@@ -91,7 +91,6 @@
             </div>
         </nav>
         {{-- navbar end --}}
-
     <div class="container-fluid bidang py-5 bg-light">
         <div class="container py-5">
                 
@@ -106,7 +105,7 @@
             <!-- Bidang Cards -->
             <div class="row text-center">
                 <!-- Card 1 -->
-                @foreach ($bidang1 as $key=>$item)
+                @foreach ($bidang4 as $key=>$item)
                 
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="card bg-light">
@@ -122,25 +121,24 @@
             </div>
         </div>
     </div>
-
-    {{-- footer start --}}
-    <footer class="footer-section ">
-        <div class="container relative">
-            <div class="border-top copyright" >
-                <div class="row pt-4">
-                    <div class="col-lg-6">
-                        <a class="mb-4 text-center text-lg-start" style="color: #1a0dab" href=""><img src="{{ asset('storage/gambar/smkypc.png') }}" alt="" style="width: 10%; margin-right:3%" >SMK YPC TASIKMALAYA <br></a><p style="margin-left: 13%">Jl. Garut - Tasikmalaya, Cikunten, Kec. Singaparna, Kabupaten Tasikmalaya, Jawa Barat 46414</p>
-                    </div>
-                    <div class="col-lg-6 text-center text-lg-end">
-                        <ul class="list-unstyled d-inline-flex ms-auto">
-                            <li class="me-4"><a href="#">Terms &amp; Conditions</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                        </ul>
-                    </div>
+{{-- footer start --}}
+<footer class="footer-section ">
+    <div class="container relative">
+        <div class="border-top copyright" >
+            <div class="row pt-4">
+                <div class="col-lg-6">
+                    <a class="mb-4 text-center text-lg-start" style="color: #1a0dab" href=""><img src="{{ asset('storage/gambar/smkypc.png') }}" alt="" style="width: 10%; margin-right:3%" >SMK YPC TASIKMALAYA <br></a><p style="margin-left: 13%">Jl. Garut - Tasikmalaya, Cikunten, Kec. Singaparna, Kabupaten Tasikmalaya, Jawa Barat 46414</p>
+                </div>
+                <div class="col-lg-6 text-center text-lg-end">
+                    <ul class="list-unstyled d-inline-flex ms-auto">
+                        <li class="me-4"><a href="#">Terms &amp; Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </footer>
-    {{-- footer end --}}
+    </div>
+</footer>
+{{-- footer end --}}
 </body>
 </html>

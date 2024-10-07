@@ -54,15 +54,15 @@
                             </div>
                             <div class="form-group pt-2">
                                 <label for="price">Nama</label>
-                                <input type="text" name="nama" class="form-control" id="price" placeholder="Masukkan Deskripsi" value="{{ $bidang6->nama }}">
+                                <input type="text" name="nama" class="form-control" id="price" placeholder="Masukkan Nama" value="{{ $bidang6->nama }}">
                             </div>
                             <div class="form-group pt-2">
                                 <label for="quantity">Kelas</label>
-                                <input type="text" name="kelas" class="form-control" id="quantity" placeholder="Masukkan tanggal" value="{{ $bidang6->kelas }}">
+                                <input type="text" name="kelas" class="form-control" id="quantity" placeholder="Masukkan Kelas" value="{{ $bidang6->kelas }}">
                             </div>
                             <div class="form-group pt-2">
-                                <label for="quantity">quotes</label>
-                                <input type="link" name="quotes" class="form-control" id="quantity" placeholder="Masukkan link gdrive" value="{{ $bidang6->quotes }}">
+                                <label for="quantity">Quotes</label>
+                                <input type="link" name="quotes" class="form-control" id="quantity" placeholder="Masukkan Quotes" value="{{ $bidang6->quotes }}">
                             </div>
                             <input type="submit" class="btn btn-secondary w-100 btn-block mt-5 text-white" style="background-color: #13357B"></input>
                         </form>

@@ -45,7 +45,7 @@
                     </div>
                     <div class="card-body">
                                 
-                        <form action="/update-bidang7/{{ $bidang7->id }}" method="post" enctype="multipart/form-data">
+                        <form action="/update-bidang/{{ $bidang->id }}" method="post" enctype="multipart/form-data">
                             @csrf
                             
                             <div class="form-group pt-2">
@@ -54,15 +54,15 @@
                             </div>
                             <div class="form-group pt-2">
                                 <label for="price">Nama</label>
-                                <input type="text" name="nama" class="form-control" id="price" placeholder="Masukkan Nama" value="{{ $bidang7->nama }}">
+                                <input type="text" name="nama" class="form-control" id="price" placeholder="Masukkan Nama" value="{{ $bidang->nama }}">
                             </div>
                             <div class="form-group pt-2">
                                 <label for="quantity">Kelas</label>
-                                <input type="text" name="kelas" class="form-control" id="quantity" placeholder="Masukkan Kelas" value="{{ $bidang7->kelas }}">
+                                <input type="text" name="kelas" class="form-control" id="quantity" placeholder="Masukkan Kelas" value="{{ $bidang->kelas }}">
                             </div>
                             <div class="form-group pt-2">
                                 <label for="quantity">Quotes</label>
-                                <input type="link" name="quotes" class="form-control" id="quantity" placeholder="Masukkan Quotes" value="{{ $bidang7->quotes }}">
+                                <input type="link" name="quotes" class="form-control" id="quantity" placeholder="Masukkan Quotes" value="{{ $bidang->quotes }}">
                             </div>
                             <input type="submit" class="btn btn-secondary w-100 btn-block mt-5 text-white" style="background-color: #13357B"></input>
                         </form>

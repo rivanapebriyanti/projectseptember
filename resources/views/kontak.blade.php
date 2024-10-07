@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="{{ asset('assets/bootstrap/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 
+         {{-- navbar start --}}
+    {{-- <div class="container-fluid position-relative p-2"> --}}
         <nav class="navbar navbar-expand-lg navbar px-6 px-lg-5 py-4 py-lg-2">
             <a href="" class="navbar-brand p-0">
                 <h1 class="m-0"><i class="fa fa-map-marker-alt me-3" style="font-style: roboto text-light"></i>OSIS SMK YPC</h1>
@@ -20,25 +22,25 @@
                 <div class="navbar-nav ms-auto py-0">
                     <a href="/" class="nav-item nav-link active">Beranda</a>
                     <a href="/about" class="nav-item nav-link ">About</a>
-                    {{-- <a href="" class="nav-item nav-link">Pengumuman</a> --}}
+                    <a href="/pengumuman" class="nav-item nav-link">Pengumuman</a>
                     <div class="nav-item dropdown">
-                        <a href="/bidang" class="nav-link">Bidang <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                        <a href="" class="nav-link">Bidang <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
                             <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
                         </svg></a>
                         <div class="dropdown-menu m-0">
-                            <a href="" class="dropdown-item">BPH</a>
-                            <a href="" class="dropdown-item">Bidang 1</a>
-                            <a href="" class="dropdown-item">Bidang 2</a>
-                            <a href="" class="dropdown-item">Bidang 3</a>
-                            <a href="" class="dropdown-item">Bidang 4</a>
-                            <a href="" class="dropdown-item">Bidang 5</a>
-                            <a href="" class="dropdown-item">Bidang 6</a>
-                            <a href="" class="dropdown-item">Bidang 7</a>
-                            <a href="" class="dropdown-item">Bidang 8</a>
-                            <a href="" class="dropdown-item">Bidang 9</a>
+                            <a href="/bidang" class="dropdown-item">BPH</a>
+                            <a href="/bidang1" class="dropdown-item">Bidang 1</a>
+                            <a href="/bidang2" class="dropdown-item">Bidang 2</a>
+                            <a href="/bidang3" class="dropdown-item">Bidang 3</a>
+                            <a href="/bidang4" class="dropdown-item">Bidang 4</a>
+                            <a href="/bidang5" class="dropdown-item">Bidang 5</a>
+                            <a href="/bidang6" class="dropdown-item">Bidang 6</a>
+                            <a href="/bidang7" class="dropdown-item">Bidang 7</a>
+                            <a href="/bidang8" class="dropdown-item">Bidang 8</a>
+                            <a href="/bidang9" class="dropdown-item">Bidang 9</a>
                         </div>
                     </div>
-                    <a href="/" class="nav-item nav-link">Kegiatan</a>
+                    <a href="/kegiatan" class="nav-item nav-link">Kegiatan</a>
                     <a href="/kontak" class="nav-item nav-link">Kontak</a>
                 </div>
                 <a href="/auth" class="btn rounded-pill py-2 px-4 ms-lg-4 text-white " style="background-color: #13357B;">Login</a>

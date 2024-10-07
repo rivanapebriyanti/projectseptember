@@ -35,14 +35,14 @@ class Bidang9Controller extends Controller
             $anggota = time() . '_anggota.' . $ext;
             $request->file('anggota')->storeAs('gambar', $anggota);
         }
-        $bidang8 = Bidang9::create([
+        $bidang9 = Bidang9::create([
             'anggota' => $anggota,
             'nama' => $request->nama,
             'kelas' => $request->kelas,
             'quotes' => $request->quotes,
         ]);
 
-        if ($bidang8) {
+        if ($bidang9) {
             Session::flash('pesan', 'Data berhasil disimpan');
         } else {
             Session::flash('pesan', 'Data gagal disimpan');
@@ -116,7 +116,8 @@ class Bidang9Controller extends Controller
     {
         $data['bidang9'] =Bidang9::all();
 
-        $data['bidang9'] = Bidang9::where('judul', 'LIKE', '%' . $request->cari . '%')->get();
+        $data['bidang9'] = Bidang9::where('nama', 'LIKE', '%' . $request->cari . '%')->orwhere('kelas', 'LIKE', '%' . $request->cari . '%')->get();
+
 
 
         return view('admin-bidang9', $data);

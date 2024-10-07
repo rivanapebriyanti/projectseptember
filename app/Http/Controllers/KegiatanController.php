@@ -113,6 +113,12 @@ class KegiatanController extends Controller
 
         return view('admin-kegiatan', $data);
     }
+
+    public function detail(Request $request){
+        $data['kegiatan']=Kegiatan::all();
+        $data['kegiatan'] = Kegiatan::where("id", $request->id)->first();
+        return view('detail-kegiatan', $data);
+    }
 }
 
 

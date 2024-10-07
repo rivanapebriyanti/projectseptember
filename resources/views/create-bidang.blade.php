@@ -35,38 +35,35 @@
         </div>
     </div>
 </nav>
-    
-    <div class="container mt-5">
+    <div class="container mt-5" style="border-color: #13357B">
         <div class="row justify-content-center">
             <div class="col-md-6">
-                <div class="card mt-5" >
+                <div class="card mt-5">
                     <div class="card-header text-center">
-                        Edit Kegiatan 
+                        Tambahkan Kegiatan
                     </div>
-                    <div class="card-body">
-                                
-                        <form action="/update-bidang7/{{ $bidang7->id }}" method="post" enctype="multipart/form-data">
+                    <div class="card-body " >
+                        <form action="/create-bidang" method="post" enctype="multipart/form-data">
                             @csrf
                             
                             <div class="form-group pt-2">
                                 <label for="image">Anggota</label>
-                                <input type="file" name="anggota" class="form-control-file" id="image" >
+                                <input type="file" name="anggota" class="form-control-file" id="image">
                             </div>
                             <div class="form-group pt-2">
                                 <label for="price">Nama</label>
-                                <input type="text" name="nama" class="form-control" id="price" placeholder="Masukkan Nama" value="{{ $bidang7->nama }}">
+                                <input type="text" name="nama" class="form-control" id="price" placeholder="Masukkan Nama">
                             </div>
                             <div class="form-group pt-2">
                                 <label for="quantity">Kelas</label>
-                                <input type="text" name="kelas" class="form-control" id="quantity" placeholder="Masukkan Kelas" value="{{ $bidang7->kelas }}">
+                                <input type="text" name="kelas" class="form-control" id="quantity" placeholder="Masukkan Kelas">
                             </div>
                             <div class="form-group pt-2">
-                                <label for="quantity">Quotes</label>
-                                <input type="link" name="quotes" class="form-control" id="quantity" placeholder="Masukkan Quotes" value="{{ $bidang7->quotes }}">
+                                <label for="quantity">quotes</label>
+                                <input type="link" name="quotes" class="form-control" id="quantity" placeholder="Masukkan Quotes">
                             </div>
                             <input type="submit" class="btn btn-secondary w-100 btn-block mt-5 text-white" style="background-color: #13357B"></input>
                         </form>
-                            {{-- @endforeach --}}
                     </div>
                 </div>
             </div>

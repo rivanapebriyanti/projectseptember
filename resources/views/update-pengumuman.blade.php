@@ -15,7 +15,7 @@
 <nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark fixed-top" arial-label="Furni navigation bar" style="background-color: #13357B">
     
     <div class="container">
-        <a class="navbar-brand" href="#">KEGIATAN</a>
+        <a class="navbar-brand" href="#">Pengumuman</a>
         
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

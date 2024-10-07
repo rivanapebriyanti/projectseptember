@@ -114,7 +114,8 @@ class Bidang8Controller extends Controller
     {
         $data['bidang8'] =Bidang8::all();
 
-        $data['bidang8'] = Bidang8::where('judul', 'LIKE', '%' . $request->cari . '%')->get();
+        $data['bidang8'] = Bidang8::where('nama', 'LIKE', '%' . $request->cari . '%')->orwhere('kelas', 'LIKE', '%' . $request->cari . '%')->get();
+
 
 
         return view('admin-bidang8', $data);

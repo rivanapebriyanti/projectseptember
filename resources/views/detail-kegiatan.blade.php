@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pengumuman</title>
+    <title>Detail Kegiatan</title>
     <link rel="stylesheet" href="{{ asset('assets/bootstrap/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <style>
@@ -101,36 +101,41 @@
         {{-- navbar end --}}
 
     <!-- Section About Us -->
-    <div class="container-fluid about py-5 bg-light">
+    <div class="container-fluid about py-5 bg-white">
         <div class="container py-5">
-            <div class="mx-auto text-center mb-5" style="max-width: 900px;">
-                <h4 class="mb-0">Pengumuman</h4>
-                <h1 class="bold mt-3">Welcome to <span>OSIS SMK YPC</span></h1>
-                <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, dolorum, doloribus sunt dicta, officia voluptatibus libero necessitatibus natus impedit quam ullam assumenda?</p>
-            </div>
+            
 
             <!-- Content Card -->
             <div class="container py-5 content-center">
                 {{-- <div class="card"> --}}
                     <div class="row">
-                        @foreach ($pengumuman as $key=>$item)
-                            <a class="col-lg-12 mb-5 mx-auto text-decoration-none" href="/detail-pengumuman/{{ $item->id }}">
-                                <div class="card " style="border:none;">
-                                    <div class="card-body">
-                                        <div class="row g-5 align-items-center">
-                                            <div class="col-lg-12">
-                                                <!-- Text content -->
-                                                <h1>{{ $item->judul }}</h1>
-                                                <p>{{ $item->deskripsi }}</p>
-                                                <div class="date mt-4">{{ $item->tanggal }}</div>
-                                                
+                        {{-- @foreach ($kegiatan as $key=>$item) --}}
+                        <div class="col-lg-12 mb-5 mx-auto">
+                            <div class="card " style="border:none;">
+                                <div class="card-body">
+                                    <div class="row g-5 align-items-center">
+                                        <div class="col-lg-12">
+                                            <!-- Text content -->
+                                            <div class="mx-auto text-center mb-5" style="max-width: 900px;">
+                                                <h4 class="mb-0">Kegiatan</h4>
+                                                <h1 class="bold mt-3">{{ $kegiatan->judul }}</h1>
                                             </div>
+                                            <h1 class="text-center mt-3 mb-4"></h1>
+                                        <div class="mx-auto text-center mb-5" style="max-width: 500px;">
+                                            <img src="{{ asset('storage/gambar/'.$kegiatan->foto) }}" class="img-fluid mb-4" alt="OSIS SMK YPC" style="border-radius: 15px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+                                        </div>
+                                            <p>{{ $kegiatan->deskripsi }}</p>
+                                            <div class="date mt-4">{{ $kegiatan->tanggal }}</div>
+                                            {{-- <a href="{{ $item->gdrive }}">{{ $item->gdrive }}</a> --}}
+                                            <a href="{{ $kegiatan->gdrive }}" class="btn btn-primary rounded-pill py-2 px-4" target="_blank">Lihat drive</a>
+
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                            @endforeach
+                            </div>
                         </div>
+                        {{-- @endforeach --}}
+                    </div>
                 </div>
             </div>
         </div>
